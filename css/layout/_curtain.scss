@@ -1,0 +1,9 @@
+.curtain {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    right: 0;
+    z-index: 4;
+    background-color: $clearGrey;
+    @include transition($secondes: 2s,$effet: cubic-bezier(0.015, -0.090, 0.975, 0.020), $delay: 2s);
+}

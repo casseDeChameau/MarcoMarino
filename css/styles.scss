@@ -14,14 +14,15 @@
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
+@import 'layout/curtain';
 
 @import 'components/buttons';
 @import 'components/carousel';
 @import 'components/slider';
 
-@import 'pages/home';
+@import 'pages/projects';
 @import 'pages/about';
-@import 'pages/contact';
+@import 'pages/index';
 
 @import 'themes/theme';
 @import 'themes/admin';

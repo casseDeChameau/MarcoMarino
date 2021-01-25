@@ -1,8 +1,8 @@
-@mixin transition($secondes: .3s, $effet: ease-in-out) {
-    ‐webkit‐transition: $secondes all $effet;
-    ‐moz‐transition: $secondes all $effet;
-    ‐ms‐transition: $secondes all $effet;
-    transition: $secondes all $effet;
+@mixin transition($secondes: .3s, $effet: ease-in-out, $delay: 0s) {
+    ‐webkit‐transition: $secondes all $effet, $delay ;
+    ‐moz‐transition: $secondes all $effet, $delay ;
+    ‐ms‐transition: $secondes all $effet, $delay;
+    transition: $secondes all $effet, $delay;
 }
 
 // @mixin frame {

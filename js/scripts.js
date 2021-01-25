@@ -1,9 +1,9 @@
 // =============================    VARIABLES   ==================================== //
 let contactLink = document.querySelector('.main-nav span');
-console.log(contactLink);
 let contactCross = document.querySelector('.cross');
-console.log(contactCross);
 let contactPan = document.querySelector('.contact');
+let curtain = document.querySelector('.curtain');
+
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
 
 
@@ -16,5 +16,7 @@ contactLink.addEventListener('click', function() {
 })
 contactCross.addEventListener('click', function() {
     contactPan.style.opacity = '0';
-    contactPan.style.right = '-100%';
+    contactPan.style.width = '0vw';
 })
+
+window.onload = curtain.style.right= '-100%';
