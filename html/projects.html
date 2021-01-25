@@ -6,20 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Marco Marino</title>
     <!-- ! styles -->
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="../css/styles.min.css">
 </head>
 
 <body>
     <!-- ? ------------------------------------------------------------ COMMON PART : CURTAIN / NAV / CONTACT / FOOTER -->
     <!-- :::::::::::::::::::::::::::::::::::::::::::::: CONTACT IS DEFAULT HIDDEN -->
     <div class="contact">
-        <h2>Hello! Let's work together.</h2>
-        <input name="form" value="" type="text" placeholder="First name">
-        <input name="form" value="" type="text" placeholder="Second name">
-        <input name="form" value="" type="email" placeholder="Email adress">
-        <textarea name="form" placeholder="Project description"></textarea>
-        <button class="form-btn">send request</button>
-        <a target="_blank" href="https://www.marcomarino.design/documents/Resume.pdf">Download resume</a>
+        <div class="form-top">
+            <h2>Hello! Let's work together.</h2>
+            <div class="cross">X</div>
+        </div>
+        <div class="form-field">
+            <div class="form-names">
+                <input name="form" type="text" placeholder="First name">
+                <input name="form" type="text" placeholder="Second name">
+            </div>
+            <input name="form" type="email" placeholder="Email adress">
+            <textarea name="form" value="project-description" placeholder="Project description"></textarea>
+        </div>
+        <div class="form-bottom">
+            <button class="form-btn">send request</button>
+            <a target="_blank" href="https://www.marcomarino.design/documents/Resume.pdf">Download resume</a>
+        </div>
     </div>
     <!-- ::::::::::::::::::::::::::::::::::::::::::::::: CURTAIN IS ANIMATED AT OPENING -->
     <div class="curtain"></div>
@@ -41,7 +50,7 @@
             <a href="../index.html">MARCO MARINO</a>
             <a href="html/projects.html">+Projects</a>
             <a href="#">About</a>
-            <a href="#">Contact</a>
+            <span>Contact</span>
         </nav>
     </header>
 
@@ -65,6 +74,6 @@
     </footer>
     
 </body>
-<script src="scripts.js"></script>
+<script src="../js/scripts.js"></script>
 
 </html>
