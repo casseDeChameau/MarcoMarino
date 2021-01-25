@@ -1,0 +1,64 @@
+.contact {
+    position: fixed;
+    z-index: 3;
+    width: 600px;
+    @media screen and (max-width: 1024px) {
+        width: 100vw;
+    }
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    right: -100%;
+    background: $darkGrey;
+    color: white;
+    padding: 50px;
+    
+    @include transition(.5s);
+
+    .form-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        margin-bottom: 80px;
+
+    }
+    .form-field {
+        display: flex;
+        flex-flow: column nowrap;
+        .form-names {
+            display: flex;
+            [placeholder="First name"]{
+                margin-right: 10px;
+            }
+        }
+        input, textarea {
+            width: 100%;
+            margin: 10px 0;; 
+            background-color: $clearGrey;
+            border: none;
+            border-radius: 2px;
+            padding: 15px 10px;
+        }
+        textarea {
+            height: 200px;
+        }
+    }
+    .form-bottom {
+        margin: 20px 0;
+    }
+    button {
+        background-color: $darkGrey;
+        border: 1px solid white;
+        color: white;
+        padding: 15px;
+    }
+    a {
+       color: white; 
+       margin-left: 20px;
+    }
+}

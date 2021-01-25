@@ -8,3 +8,13 @@ Instagram
 Linkedin
 Tumblr
 Best experience on modern browsers
+
+
+//CONTACT
+
+Hello! Let's work together.
+First name
+Second name
+Email adress
+Project description
+Download resume

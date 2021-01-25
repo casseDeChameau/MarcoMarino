@@ -1,0 +1,10 @@
+@mixin transition($secondes: .3s, $effet: ease-in-out) {
+    ‐webkit‐transition: $secondes all $effet;
+    ‐moz‐transition: $secondes all $effet;
+    ‐ms‐transition: $secondes all $effet;
+    transition: $secondes all $effet;
+}
+
+// @mixin frame {
+//     border-radius: ;
+// }
