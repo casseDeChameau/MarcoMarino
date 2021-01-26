@@ -1,15 +1,16 @@
 .header {
     height: 50px;
+
     // ! ------------------------------ for JS animation
     @include transition(
         $secondes: .5s,
         $delay: 1s
     );
-    // transform: translateY(-100%);
+    transform: translateY(-100%);
     
     .main-nav {
         position: fixed;
-        z-index: 2;
+        z-index: 1;
         width: 100vw;
         display: flex;
         justify-content: flex-end;
