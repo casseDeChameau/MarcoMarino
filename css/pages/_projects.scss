@@ -1,0 +1,53 @@
+.projects-panel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    // todo : lever la hauteur de header et remplacer dans splash de l'index 
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: none;
+    }
+    .anabelle:hover {
+        background: url(/img/cover_anabelle.jpg) center/cover;
+    }
+    .decathlon:hover {
+        background: url(/img/cover_decathlon.png) center/cover;
+
+    }
+    .evento:hover {
+        background: url(/img/cover_eventoxtra.jpg) center/cover;
+    }
+    .flako:hover {
+        background: url(/img/cover_elflako.jpg) center/cover;
+    }
+    .project-bg {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 1);
+            transition: 5s all ease-in-out;
+            &:hover{
+                visibility: hidden;
+            }
+        }
+}
+    h2 {
+        font-size: 2rem;
+        margin: 0;
+        text-shadow: 0 0 .1rem rgba(0, 0, 0, .1);
+    }
+    p {
+        font-size: 0.6rem;
+        letter-spacing: .1rem;
+        margin: .3rem 0 0;
+        text-shadow: 0 0 .1rem rgba(0, 0, 0, .1);
+    }
+}

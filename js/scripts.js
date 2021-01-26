@@ -6,6 +6,9 @@ let curtain = document.querySelector('.curtain');
 let header = document.querySelector('.header');
 let splash = document.querySelector('.splash');
 let timeoutID;
+let projectTitle = document.querySelectorAll('.projects-panel a');
+console.log(projectTitle);
+
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
 function openContact() {
     contactPan.style.transform = "translateX(0%)";
@@ -19,21 +22,36 @@ function openAnimes() {
     // bring down the nav
     header.style.transform = "translateY(0%)";
     // bring up the splash
-    splash.style.transform  = "translateY(0%)";
+    if (splash) {
+        splash.style.transform  = "translateY(0%)";
+    }
 }
 function startOpenAnimes() {
     timeoutID = window.setTimeout(openAnimes, 500);
 }
+
+// function showProjectBG() {
+//     for(i = 0 ; i < projectTitle.lenth ; i++) {
+//         if(projectTitle[i].addEventListener('mouseover')) {
+
+//         }
+//     }
+// }
+// projectTitle.addEventListener('mouseover', function(){
+//     console.log('la souris est dessus');
+// })
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    METHODS     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ //
 
 // ? -------------------------------------------------------- open/close contact panel
 contactLink.addEventListener('click', openContact);
 contactCross.addEventListener('click', closeContact);
-// ? -------------------------------------------------------- onload effects
 
+// ? -------------------------------------------------------- onload effects
 window.onload = startOpenAnimes;
 
-
+// ? -------------------------------------------------------- project bg shown on mouseover
+// projectTitle.addEventListener('mouseover', showProjectBG);
+// projectTitle.addEventListener('mouseout', hideProjectBG);
 
 
 // faire un timer on load (delay .5s)
