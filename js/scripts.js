@@ -3,20 +3,42 @@ let contactLink = document.querySelector('.main-nav span');
 let contactCross = document.querySelector('.cross');
 let contactPan = document.querySelector('.contact');
 let curtain = document.querySelector('.curtain');
-
+let header = document.querySelector('.header');
+let splash = document.querySelector('.splash');
+let timeoutID;
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
-
-
+function openContact() {
+    contactPan.style.transform = "translateX(0%)";
+}
+function closeContact() {
+    contactPan.style.transform = "translateX(100%)";
+}
+function openAnimes() {
+    // reduce width of curtain
+    curtain.style.transform = "translateX(100%)";
+    // bring down the nav
+    header.style.transform = "translateY(0%)";
+    // bring up the splash
+    splash.style.transform  = "translateY(0%)";
+}
+function startOpenAnimes() {
+    timeoutID = window.setTimeout(openAnimes, 500);
+}
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    METHODS     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ //
 
+// ? -------------------------------------------------------- open/close contact panel
+contactLink.addEventListener('click', openContact);
+contactCross.addEventListener('click', closeContact);
+// ? -------------------------------------------------------- onload effects
 
-contactLink.addEventListener('click', function() {
-    contactPan.style.right = '0%';
-    contactPan.style.opacity = '1';
-})
-contactCross.addEventListener('click', function() {
-    contactPan.style.opacity = '0';
-    contactPan.style.width = '0vw';
-})
+window.onload = startOpenAnimes;
 
-window.onload = curtain.style.right= '-100%';
+
+
+
+// faire un timer on load (delay .5s)
+// après le timer déclancher tous les éléments
+/* 
+    1 volet (.5s ease-in-out)
+    2 nav descend et splash monte (.2s ease-in-out .2s)
+*/

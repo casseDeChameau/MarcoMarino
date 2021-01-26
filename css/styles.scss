@@ -5,16 +5,17 @@
 @import 'vendors/bootstrap';
 @import 'vendors/jquery-ui';
 
+@import 'base/general';
 @import 'base/reset';
 @import 'base/typography';
 
+@import 'layout/curtain';
 @import 'layout/navigation';
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
-@import 'layout/curtain';
 
 @import 'components/buttons';
 @import 'components/carousel';

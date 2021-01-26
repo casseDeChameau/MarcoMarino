@@ -9,12 +9,17 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    right: -100%;
     background: $darkGrey;
     color: white;
     padding: 50px;
+    right: 0;
     
-    @include transition(.5s);
+    //  ! ---------------------------- for JS animation
+    transform: translateX(100%);
+    @include transition(
+        $secondes: 1s,
+        $effet: ease-in-out
+    );
 
     .form-top{
         display: flex;
@@ -25,6 +30,9 @@
             font-size: 2rem;
         }
         margin-bottom: 80px;
+    .cross {
+        cursor: pointer;
+    }    
 
     }
     .form-field {

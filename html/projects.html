@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="../css/styles.min.css">
 </head>
 
-<body>
-    <!-- ? ------------------------------------------------------------ COMMON PART : CURTAIN / NAV / CONTACT / FOOTER -->
-    <!-- :::::::::::::::::::::::::::::::::::::::::::::: CONTACT IS DEFAULT HIDDEN -->
+<body class="no-scroll">
+    <!-- ? -------------- COMMON PART : CURTAIN / NAV / CONTACT / FOOTER -->
+    <!-- :::::::::::::::: CONTACT IS DEFAULT HIDDEN -->
     <div class="contact">
         <div class="form-top">
             <h2>Hello! Let's work together.</h2>
@@ -30,7 +30,8 @@
             <a target="_blank" href="https://www.marcomarino.design/documents/Resume.pdf">Download resume</a>
         </div>
     </div>
-    <!-- ::::::::::::::::::::::::::::::::::::::::::::::: CURTAIN IS ANIMATED AT OPENING -->
+
+    <!-- :::::::::::::::: CURTAIN IS ANIMATED AT OPENING -->
     <div class="curtain"></div>
 
     <!-- <div class="svg-bg">
@@ -47,10 +48,12 @@
     <!-- ::::::::::::::::::::::::::::::::::::::::::::::: NAV IS TOP FIXED -->
     <header class="header">
         <nav class="main-nav">
-            <a href="../index.html">MARCO MARINO</a>
-            <a href="html/projects.html">+Projects</a>
-            <a href="#">About</a>
-            <span>Contact</span>
+            <a class="logo" href="../index.html">MARCO MARINO</a>
+            <div class="nav-links">
+                <a href="projects.html">+Projects</a>
+                <a href="#">About</a>
+                <span>Contact</span>
+            </div>
         </nav>
     </header>
 

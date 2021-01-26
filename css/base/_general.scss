@@ -1,0 +1,23 @@
+a, span {
+    color: white;
+    text-decoration: none;
+    font-size: .75rem;
+    letter-spacing: .05rem;;
+}
+
+// concern INDEX, PROJECTS
+.no-scroll {
+    height: 100vh;
+    width: 100vw;
+    background-color: $darkGrey;
+    a, span {
+        color: white;
+        text-decoration: none;
+        font-size: .75rem;
+        letter-spacing: .05rem;
+    }
+    color: white;
+    overflow: hidden;
+}
+
+
