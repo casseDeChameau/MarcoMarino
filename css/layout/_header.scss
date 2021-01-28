@@ -1,0 +1,11 @@
+.header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    // ! ------------------------------ for JS animation
+    @include transition(
+        $secondes: .5s,
+        $delay: 1s
+    );
+    transform: translateY(-100%);   
+}

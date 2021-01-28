@@ -10,9 +10,8 @@
 
 </head>
 
-<body>
-    <!-- ? ------------------------------------------------------------ COMMON PART : CURTAIN / NAV / CONTACT / FOOTER -->
-    <!-- :::::::::::::::::::::::::::::::::::::::::::::: CONTACT IS DEFAULT HIDDEN -->
+<body class="project-body">
+    <!-- ?  COMMON PART : CURTAIN / NAV / CONTACT / FOOTER -->
     <div class="contact">
         <div class="form-top">
             <h2>Hello! Let's work together.</h2>
@@ -31,46 +30,103 @@
             <a target="_blank" href="https://www.marcomarino.design/documents/Resume.pdf">Download resume</a>
         </div>
     </div>
-    <!-- ::::::::::::::::::::::::::::::::::::::::::::::: CURTAIN IS ANIMATED AT OPENING -->
-    <div class="curtain"></div>
-    <!-- ::::::::::::::::::::::::::::::::::::::::::::::: NAV IS TOP FIXED -->
-    <header class="header">
-        <nav class="main-nav">
-            <a href="../index.html">MARCO MARINO</a>
-            <a href="projects.html">+Projects</a>
-            <a href="#">About</a>
-            <span>Contact</span>
 
+    <div class="curtain"></div>
+
+    <header class="header">
+        <nav class="main-nav project-nav">
+            <a class="logo" href="../index.html">MARCO MARINO</a>
+            <div class="nav-links">
+                <a href="../html/projects.html">+Projects</a>
+                <a href="#">About</a>
+                <span>Contact</span>
+            </div>
         </nav>
     </header>
 
-    <!-- ! ///////////////////////////////////////////////////////////////////////////// PAGE PART  -->
+    <!-- ! PAGE PART  -->
+    <div class="project-page pp-anabelle">
+        <!-- ------------------------------------------- hero banner -->
+        <section class="hero anabelle-hero">
+            <h1>Annabelle</h1>
+            <p>VISUAL IDENTITY</p>
+            <div class="arrowdown">
+                <div class="turned-square"></div>
+            </div>
+        </section>
+        <!-- ------------------------------------------- wrapper -->
+        <div class="project-wrap">
+            <section class="description">
+                <h3>CHALLENGE</h3>
+                <p>Annabelle is a new-borned wedding planner agency. The mission of the founders is to give to every wedding a strong touch of style and elegance. For this reason, the main idea is to mix tradition and innovation perfectly.</p>
+                <p>We have applied to Annabelle this concept, making timeless its visual identity, focusing on the attentive choice of soft colours and typography, that could fit with the romantic images and the idea of sweetness.</p>
+            </section>
     
-    <div class="splash">
-        <h1>Less is more work —</h1>
-        <p>Hi, I'm Marco UI · UX Designer based in E2°10'7.43N41°23'11"</p>
-        <a href="projects.html">— Explore Projects</a>
+            <section class="big-pic">
+                <div class="thumb-frame an-thumb-1"></div>
+                <div class="thumb-frame an-thumb-2"></div>
+            </section>
+    
+            <section class="quote-title">
+                <h3>CORPORATE IDENTITY</h3>
+                <strong>Great typography and a minimal and cool color palette.</strong>
+            </section>
+    
+            <section class="swiper">
+                <!-- -------------------------------------------------- Swiper -->
+                <!-- <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-1.jpg" alt="anabelle project portfolio"></div>
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-2.jpg" alt="anabelle project portfolio"></div>
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-3.jpg" alt="anabelle project portfolio"></div>
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-4.jpg" alt="anabelle project portfolio"></div>
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-5.jpg" alt="anabelle project portfolio"></div>
+                        <div class="swiper-slide"><img src="../img/anabelle-slider-6.jpg" alt="anabelle project portfolio"></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div> -->
+            </section>
+            
+            <section class="big-pic">
+                <div class="thumb-frame an-thumb-3"></div>
+            </section>
+            
+            <section class="quote-title">
+                <h3>WEB DESIGN & UI</h3>
+                <strong>An impact white landing page with a simple navigation.</strong>
+            </section>
+            
+            <section class="big-pic">
+                <div class="thumb-frame an-thumb-4"></div>
+                <div class="thumb-frame an-thumb-5"></div>
+            </section>
+        </div>       
     </div>
 
-    <!-- ? ----------------------------------------------------------------------------- COMMON PART  -->
     <!-- FOOTER DISAPPEAR AT MOBILE VIEW -->
     <footer class="footer project-footer">
-        <a href="el-flako_project.html">
+        <div class="next-project">
             <div class="project-title">
-                <div class="arrow-box"><img src="/img/arrow.svg" alt="arrow navigation"></div>
                 <p>see next project</p>
                 <h2>El Flako</h2>
             </div>
-        </a>
-        <a target="_blank" href="https://dribbble.com/marcomarino">Dribbble</a>
-        <a target="_blank" href="https://www.instagram.com/marcomarino.design/">Instagram</a>
-        <a target="_blank" href="https://www.linkedin.com/in/marcomarinodesign/">Linkedin</a>
-        <a target="_blank" href="https://curiou5.tumblr.com/">Tumblr</a>
-        <p>Best experience on modern browsers</p>   
+            <a href="el-flako_project.html">
+                <div class="arrow-box"><img src="/img/arrow.svg" alt="arrow navigation"></div>
+            </a>
+        </div>
+        <!-- ?  COMMON PART  -->
+        <div class="bottom-links">
+            <a target="_blank" href="https://dribbble.com/marcomarino">Dribbble</a>
+            <a target="_blank" href="https://www.instagram.com/marcomarino.design/">Instagram</a>
+            <a target="_blank" href="https://www.linkedin.com/in/marcomarinodesign/">Linkedin</a>
+            <a target="_blank" href="https://curiou5.tumblr.com/">Tumblr</a>
+            <p>Best experience on modern browsers</p>   
+        </div>
     </footer>
-    
+
+    <!-- <script src="../package/swiper-bundle.min.js"></script> -->
+    <script src="../js/scripts.js"></script>
 </body>
-<script src="../js/scripts.js"></script>
-
-
 </html>

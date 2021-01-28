@@ -1,26 +1,30 @@
 body {
-    overflow: hidden;
-}
-a, span {
-    color: white;
-    text-decoration: none;
-    font-size: .75rem;
-    letter-spacing: .05rem;;
-}
+    position: static;
+    height: 100%;
+    // width: 100vw;
+    
+    // concern INDEX, PROJECTS
+    &.no-scroll {
+        height: 100vh;
+        width: 100vw;
+        background-color: $darkGrey;
+        a, span {
+            color: white;
+            text-decoration: none;
+            font-size: .75rem;
+            letter-spacing: .05rem;
+        }
+        color: white;
+        overflow: hidden; 
+    }
 
-// concern INDEX, PROJECTS
-.no-scroll {
-    height: 100vh;
-    width: 100vw;
-    background-color: $darkGrey;
     a, span {
         color: white;
         text-decoration: none;
         font-size: .75rem;
-        letter-spacing: .05rem;
+        letter-spacing: .05rem;;
     }
-    color: white;
-    overflow: hidden;
+    img {
+        width: 100%;
+    }
 }
-
-

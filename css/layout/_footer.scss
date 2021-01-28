@@ -2,22 +2,58 @@
     width: 100vw;
     position: absolute;
     bottom: 0;
-    padding: 40px;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     background-color: none;
-    a {
-        padding-right: 35px;
+    padding: 4rem 3rem 2rem;
 
+    .bottom-links {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a {
+            padding-right: 35px;
+        }
+        p {
+            margin-left: auto;
+            color: grey;
+            font-style: italic;
+            font-size: .7rem;;
+        }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
     }
-    p {
-        margin-left: auto;
-        color: grey;
-        font-style: italic;
-        font-size: .7rem;;
-    }
+}
+
+.project-footer { 
+    height: 25rem;
+    background: $darkGrey;
     @media screen and (max-width: 1024px) {
-        display: none;
+        height: 20rem;;
+    }
+    .next-project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        width: 100%;
+        
+        h2 {
+            font-size: 4rem;
+            margin: 0;
+        }
+        p {
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: .8rem;
+            letter-spacing: .1rem;;
+        }
+        .arrow-box {
+            width: 3rem;
+        }
     }
 }

@@ -6,8 +6,8 @@ let curtain = document.querySelector('.curtain');
 let header = document.querySelector('.header');
 let splash = document.querySelector('.splash');
 let timeoutID;
-let projectTitle = document.querySelectorAll('.projects-panel a');
-console.log(projectTitle);
+// let projectTitle = document.querySelectorAll('.projects-panel a');
+// console.log(projectTitle);
 
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
 function openContact() {
@@ -53,10 +53,16 @@ window.onload = startOpenAnimes;
 // projectTitle.addEventListener('mouseover', showProjectBG);
 // projectTitle.addEventListener('mouseout', hideProjectBG);
 
-
-// faire un timer on load (delay .5s)
-// après le timer déclancher tous les éléments
-/* 
-    1 volet (.5s ease-in-out)
-    2 nav descend et splash monte (.2s ease-in-out .2s)
-*/
+// ? -------------------------------------------------------- initialize swiper
+// var swiper = new Swiper('.swiper-container', {
+//     cssMode: true,
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     pagination: {
+//       el: '.swiper-pagination'
+//     },
+//     mousewheel: true,
+//     keyboard: true,
+//   });

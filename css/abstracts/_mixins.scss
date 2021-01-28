@@ -5,6 +5,10 @@
     transition: $secondes all $effet, $delay;
 }
 
-// @mixin frame {
-//     border-radius: ;
-// }
+@mixin frame ($url){
+    border-radius: 10px;
+    margin: 10px;
+    background-position: center;
+    background-size: bg-size;
+    background-image: $url;
+}

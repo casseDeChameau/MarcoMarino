@@ -1,0 +1,89 @@
+
+.project-body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.project-page {
+    position: relative;
+    width: 100vw;
+    height: 300vh;
+    background-color: white;
+    margin-top: 100vh;
+    display: flex;
+    
+    .hero {
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-position: center;     
+        background-size: cover;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        color: white;
+
+        h1 {
+            font-size: 6rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        p {
+            margin: -1rem 0 0;
+            letter-spacing: .2rem;
+            font-size: .8rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            // position: relative;
+            // todo : changer la position mais static ne fonctionne pas
+            height: 500px;
+            margin-top: 120px;
+        }
+    }
+    .project-wrap {
+        width: 100%;
+        margin-top: 100px;;
+        display: flex;
+        flex-flow: column;
+        align-items: center;        
+        
+        section {
+            width: 1000px;
+            @media screen and (max-width:1024px) {
+                width: 100%;
+                padding: 10px
+            }
+            
+            &.description {
+                width: 800px;
+                @media screen and (max-width: 1024px) {
+                    width: 80%;
+                }
+            }
+
+            h3 {
+                color: grey;
+                font-size: .9rem;
+                letter-spacing: .2rem;
+            }
+
+            p {
+                color: $clearGrey;
+                font-size: 0.98rem;
+                line-height: 2rem;
+                margin: 2rem 0;
+            }
+            .thumb-frame {
+                @include frame;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+}
