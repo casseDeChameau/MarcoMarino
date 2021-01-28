@@ -3,7 +3,6 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-
     div {
         display: flex;
         justify-content: center;
@@ -12,32 +11,21 @@
         text-align: center;
         background: none;
     }
-    .anabelle:hover {
+    .anabelle {
         background: url(/img/cover_anabelle.jpg) center/cover;
     }
-    .decathlon:hover {
-        background: url(/img/cover_decathlon.png) center/cover;
-
+    .decathlon {
+        background: url(/easy-reveal-blank/img/01.jpg) center/cover;
     }
-    .evento:hover {
+    .evento {
         background: url(/img/cover_eventoxtra.jpg) center/cover;
     }
-    .flako:hover {
+    .flako {
         background: url(/img/cover_elflako.jpg) center/cover;
     }
     .project-bg {
-        &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: rgba(0, 0, 0, 1);
-            transition: 5s all ease-in-out;
-            &:hover{
-                visibility: hidden;
-            }
-        }
-}
+        background: rgba(0, 0, 0, 0);
+    }
     h2 {
         font-size: 2rem;
         margin: 0;

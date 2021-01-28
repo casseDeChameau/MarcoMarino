@@ -6,16 +6,19 @@ let curtain = document.querySelector('.curtain');
 let header = document.querySelector('.header');
 let splash = document.querySelector('.splash');
 let timeoutID;
-// let projectTitle = document.querySelectorAll('.projects-panel a');
-// console.log(projectTitle);
+let projectTitle = document.querySelectorAll('.projects-panel a');
+console.log(projectTitle);
+let projectBG = document.querySelectorAll('.project-bg');
 
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
 function openContact() {
     contactPan.style.transform = "translateX(0%)";
 }
+
 function closeContact() {
     contactPan.style.transform = "translateX(100%)";
 }
+
 function openAnimes() {
     // reduce width of curtain
     curtain.style.transform = "translateX(100%)";
@@ -23,23 +26,30 @@ function openAnimes() {
     header.style.transform = "translateY(0%)";
     // bring up the splash
     if (splash) {
-        splash.style.transform  = "translateY(0%)";
+        splash.style.transform = "translateY(0%)";
     }
 }
+
 function startOpenAnimes() {
     timeoutID = window.setTimeout(openAnimes, 500);
 }
 
-// function showProjectBG() {
-//     for(i = 0 ; i < projectTitle.lenth ; i++) {
-//         if(projectTitle[i].addEventListener('mouseover')) {
 
-//         }
-//     }
-// }
-// projectTitle.addEventListener('mouseover', function(){
-//     console.log('la souris est dessus');
-// })
+function toggleProjectBG() {
+
+    for (let i = 0; i < projectTitle.length; i++) {
+        function showProjectBG() {
+            projectBG[i].classList.remove('project-bg');
+        }
+
+        function hideProjectBG() {
+            projectBG[i].classList.add('project-bg');
+        }
+        projectTitle[i].addEventListener('mouseover', showProjectBG);
+        projectTitle[i].addEventListener('mouseout', hideProjectBG);
+    }
+}
+
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    METHODS     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ //
 
 // ? -------------------------------------------------------- open/close contact panel
@@ -50,8 +60,19 @@ contactCross.addEventListener('click', closeContact);
 window.onload = startOpenAnimes;
 
 // ? -------------------------------------------------------- project bg shown on mouseover
-// projectTitle.addEventListener('mouseover', showProjectBG);
-// projectTitle.addEventListener('mouseout', hideProjectBG);
+window.addEventListener('mouseover', toggleProjectBG);
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ? -------------------------------------------------------- initialize swiper
 // var swiper = new Swiper('.swiper-container', {
