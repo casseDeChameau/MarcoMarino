@@ -1,11 +1,11 @@
 @mixin transition($secondes: .3s, $effet: ease-in-out, $delay: 0s) {
-    ‐webkit‐transition: $secondes all $effet, $delay ;
-    ‐moz‐transition: $secondes all $effet, $delay ;
+    ‐webkit‐transition: $secondes all $effet, $delay;
+    ‐moz‐transition: $secondes all $effet, $delay;
     ‐ms‐transition: $secondes all $effet, $delay;
     transition: $secondes all $effet, $delay;
 }
 
-@mixin frame ($url){
+@mixin frame ($url) {
     border-radius: 10px;
     margin: 10px;
     background-position: center;
