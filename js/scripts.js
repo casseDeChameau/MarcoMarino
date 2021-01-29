@@ -31,7 +31,7 @@ function openAnimes() {
 }
 
 function startOpenAnimes() {
-    timeoutID = window.setTimeout(openAnimes, 500);
+    timeoutID = window.setTimeout(openAnimes, 1000);
 }
 
 
