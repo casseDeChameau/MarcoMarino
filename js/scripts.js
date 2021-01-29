@@ -7,8 +7,10 @@ let header = document.querySelector('.header');
 let splash = document.querySelector('.splash');
 let timeoutID;
 let projectTitle = document.querySelectorAll('.projects-panel a');
-console.log(projectTitle);
 let projectBG = document.querySelectorAll('.project-bg');
+let allElements = document.querySelectorAll('.project-wrap *');
+console.log(allElements);
+
 
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
 function openContact() {
@@ -21,7 +23,9 @@ function closeContact() {
 
 function openAnimes() {
     // reduce width of curtain
-    curtain.style.transform = "translateX(100%)";
+    if (curtain) {
+        curtain.style.transform = "translateX(100%)";
+    }
     // bring down the nav
     header.style.transform = "translateY(0%)";
     // bring up the splash
@@ -33,7 +37,6 @@ function openAnimes() {
 function startOpenAnimes() {
     timeoutID = window.setTimeout(openAnimes, 1000);
 }
-
 
 function toggleProjectBG() {
 
@@ -50,6 +53,23 @@ function toggleProjectBG() {
     }
 }
 
+function showElement() {
+    let currentScroll = window.scrollY;
+
+    for (let i = 0; i < allElements.length; i++) {
+
+        let hElement = allElements[i].offsetHeight;
+        let elementTop = allElements[i].getBoundingClientRect();
+        // console.log(elementTop.y); 
+
+        if (currentScroll > (elementTop.y + hElement)) {
+            allElements[i].classList.add('revealed');
+        } else if ((currentScroll < (elementTop.y + (hElement / 2)))) {
+            allElements[i].classList.remove('revealed');
+        }
+    }
+}
+
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$    METHODS     $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ //
 
 // ? -------------------------------------------------------- open/close contact panel
@@ -62,7 +82,8 @@ window.onload = startOpenAnimes;
 // ? -------------------------------------------------------- project bg shown on mouseover
 window.addEventListener('mouseover', toggleProjectBG);
 
-
+// ? -------------------------------------------------------- project element smooth appearing
+window.addEventListener('scroll', showElement);
 
 
 

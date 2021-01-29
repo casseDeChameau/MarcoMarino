@@ -5,10 +5,26 @@
     transition: $secondes all $effet, $delay;
 }
 
-@mixin frame ($url) {
+@mixin frame ($urlBG, $colorBG: none, $sizeBG: cover, $widthBG: 100%, $heightBG: 600px) {
     border-radius: 10px;
     margin: 10px;
     background-position: center;
-    background-size: bg-size;
-    background-image: $url;
+    background-repeat: no-repeat;
+    background-color: $colorBG;
+    background-image: $urlBG;
+    background-size: $sizeBG;
+    width: $widthBG;
+    height: $heightBG;
+    @media screen and (max-width: 1024px) {
+        height: 500px;
+    }
+}
+
+@mixin sectionMixin ($flDir: column, $flJC: flex-start, $flAI: center, ) {
+    width: 1000px;
+    display: flex;
+    flex-direction: $flDir;
+    justify-content: $flJC;
+    align-items: $flAI;
+    padding: 20px;
 }

@@ -7,7 +7,6 @@
     justify-content: space-between;
     background-color: none;
     padding: 4rem 3rem 2rem;
-
     .bottom-links {
         width: 100%;
         display: flex;
@@ -20,7 +19,8 @@
             margin-left: auto;
             color: grey;
             font-style: italic;
-            font-size: .7rem;;
+            font-size: .7rem;
+            ;
         }
         @media screen and (max-width: 1024px) {
             display: none;
@@ -28,11 +28,12 @@
     }
 }
 
-.project-footer { 
+.project-footer {
+    position: relative;
     height: 25rem;
     background: $darkGrey;
     @media screen and (max-width: 1024px) {
-        height: 20rem;;
+        height: 17rem;
     }
     .next-project {
         display: flex;
@@ -40,9 +41,9 @@
         align-items: center;
         color: white;
         width: 100%;
-        
         h2 {
             font-size: 4rem;
+            font-weight: 200;
             margin: 0;
         }
         p {
@@ -50,7 +51,8 @@
             text-transform: uppercase;
             font-weight: 100;
             font-size: .8rem;
-            letter-spacing: .1rem;;
+            letter-spacing: .1rem;
+            ;
         }
         .arrow-box {
             width: 3rem;
