@@ -8,8 +8,7 @@ let splash = document.querySelector('.splash');
 let timeoutID;
 let projectTitle = document.querySelectorAll('.projects-panel a');
 let projectBG = document.querySelectorAll('.project-bg');
-let allElements = document.querySelectorAll('.project-wrap *');
-console.log(allElements);
+let allProjectElements = document.querySelectorAll('.project-wrap *');
 
 
 // :::::::::::::::::::::::::::::::      FUNCTIONS   ::::::::::::::::::::::::::::::::: //
@@ -53,19 +52,19 @@ function toggleProjectBG() {
     }
 }
 
-function showElement() {
+function showProjectElement() {
     let currentScroll = window.scrollY;
 
-    for (let i = 0; i < allElements.length; i++) {
+    for (let i = 0; i < allProjectElements.length; i++) {
 
-        let hElement = allElements[i].offsetHeight;
-        let elementTop = allElements[i].getBoundingClientRect();
+        let hElement = allProjectElements[i].offsetHeight;
+        let elementTop = allProjectElements[i].getBoundingClientRect();
         // console.log(elementTop.y); 
 
-        if (currentScroll > (elementTop.y + hElement)) {
-            allElements[i].classList.add('revealed');
-        } else if ((currentScroll < (elementTop.y + (hElement / 2)))) {
-            allElements[i].classList.remove('revealed');
+        if (currentScroll > (elementTop.y + hElement / 3)) {
+            allProjectElements[i].classList.add('revealed');
+        } else if ((currentScroll < (elementTop.y + (hElement)))) {
+            allProjectElements[i].classList.remove('revealed');
         }
     }
 }
@@ -83,28 +82,22 @@ window.onload = startOpenAnimes;
 window.addEventListener('mouseover', toggleProjectBG);
 
 // ? -------------------------------------------------------- project element smooth appearing
-window.addEventListener('scroll', showElement);
-
-
-
-
-
-
-
-
-
+window.addEventListener('scroll', showProjectElement);
 
 
 // ? -------------------------------------------------------- initialize swiper
-// var swiper = new Swiper('.swiper-container', {
-//     cssMode: true,
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-//     pagination: {
-//       el: '.swiper-pagination'
-//     },
-//     mousewheel: true,
-//     keyboard: true,
-//   });
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    keyboard: {
+        enabled: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});

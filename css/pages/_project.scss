@@ -70,7 +70,7 @@
         }
     }
     .project-wrap {
-        section * {
+        * :not(.swiper-pagination) :not(.swiper-pagination-bullet) :not(.swiper-button-next) :not(.swiper-button-prev) {
             opacity: 0;
             position: relative;
             transform: translateY(-30px);

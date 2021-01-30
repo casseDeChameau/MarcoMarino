@@ -1,14 +1,11 @@
 @import 'abstracts/variables';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
-
 @import 'vendors/bootstrap';
 @import 'vendors/jquery-ui';
-
 @import 'base/general';
 @import 'base/reset';
 @import 'base/typography';
-
 @import 'layout/curtain';
 @import 'layout/navigation';
 @import 'layout/grid';
@@ -16,16 +13,13 @@
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/forms';
-
 @import 'components/buttons';
 @import 'components/carousel';
 @import 'components/slider';
-
 @import 'pages/index';
 @import 'pages/projects';
 @import 'pages/project';
 @import 'pages/about';
 @import 'pages/anabelle';
-
 @import 'themes/theme';
 @import 'themes/admin';

@@ -22,3 +22,27 @@
     @include frame(url(/img/Anabelle_thumb_5.jpg), $heightBG: 800px);
     margin: 50px 0 0;
 }
+
+.an-slide1 {
+    @include frame(url(/img/anabelle-slider-1.jpg), $widthBG: 80%, $marginBG: none);
+}
+
+.an-slide2 {
+    @include frame(url(/img/anabelle-slider-2.jpg), $widthBG: 80%, $marginBG: none);
+}
+
+.an-slide3 {
+    @include frame(url(/img/anabelle-slider-3.jpg), $widthBG: 80%, $marginBG: none);
+}
+
+.an-slide4 {
+    @include frame(url(/img/anabelle-slider-4.jpg), $widthBG: 80%, $marginBG: none);
+}
+
+.an-slide5 {
+    @include frame(url(/img/anabelle-slider-5.jpg), $widthBG: 80%, $marginBG: none);
+}
+
+.an-slide6 {
+    @include frame(url(/img/anabelle-slider-6.jpg), $widthBG: 80%, $marginBG: none);
+}

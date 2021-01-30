@@ -5,9 +5,9 @@
     transition: $secondes all $effet, $delay;
 }
 
-@mixin frame ($urlBG, $colorBG: none, $sizeBG: cover, $widthBG: 100%, $heightBG: 600px) {
+@mixin frame ($urlBG, $colorBG: none, $sizeBG: cover, $widthBG: 100%, $heightBG: 600px, $marginBG: 10px) {
     border-radius: 10px;
-    margin: 10px;
+    margin: $marginBG;
     background-position: center;
     background-repeat: no-repeat;
     background-color: $colorBG;
